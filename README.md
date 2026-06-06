@@ -56,7 +56,7 @@ rag-analytics-assistant/
 │   ├── olist.db                  # SQLite database (Olist e-commerce data)
 │   ├── chunks.pkl               # Chunked review text for RAG
 │   ├── faiss_index.bin          # FAISS vector index for embeddings
-│   └── olist_loader.py          # ETL pipeline (CSV → SQLite)
+│          
 │
 ├── rag/
 │   ├── embedder.py             # Generate embeddings (Sentence Transformers)
@@ -72,7 +72,7 @@ rag-analytics-assistant/
 │   └── chart_generator.py     # Auto chart selection + Plotly visualization
 │
 ├── app.py                      # Streamlit UI (main entry point)
-│
+└── olist_loader.py             # ETL pipeline (CSV → SQLite)
 ├── .env                        # API keys (Groq / LLM keys)
 ├── requirements.txt            # Python dependencies
 └── README.md                   # Project documentation
