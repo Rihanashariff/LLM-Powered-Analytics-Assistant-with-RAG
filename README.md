@@ -48,7 +48,8 @@ It is built using the **Olist Brazilian E-Commerce dataset**.
 - Real-time query interaction
 
 
-# 📂 Project Structure
+## 📂 Project Structure
+```bash
 rag-analytics-assistant/
 │
 ├── data/
@@ -75,28 +76,30 @@ rag-analytics-assistant/
 ├── .env                        # API keys (Groq / LLM keys)
 ├── requirements.txt            # Python dependencies
 └── README.md                   # Project documentation
-
+```
 ## 📦 requirements.txt
 
-# Data handling
+Data handling:
 pandas
 numpy
 
-# Embeddings for RAG
+Embeddings for RAG:
 sentence-transformers
 
-# Vector database
+Vector database:
 faiss-cpu
 
-# LLM API (GROQ instead of OpenAI)
+LLM API (GROQ instead of OpenAI):
 groq
 
-# Environment variables
+Environment variables:
 python-dotenv
 
-# UI
+UI:
 streamlit
-📊 Dataset
+
+
+# 📊 Dataset
 Field	Detail
 Name-	Brazilian E-Commerce Public Dataset by Olist
 Source-	Kaggle (uploaded to Google Drive per guidelines)
@@ -104,7 +107,7 @@ Size	- ~100,000 orders · 8 relational tables · ~40,000 review records
 Period-	2016 – 2018
 Format-	CSV files loaded into SQLite
 
-## 💡 Example Queries
+# 💡 Example Queries
 
 # 📊 SQL Queries
 
