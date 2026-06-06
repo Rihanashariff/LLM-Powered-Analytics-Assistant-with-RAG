@@ -109,7 +109,7 @@ streamlit
 | Period | 2016 – 2018 |
 | Format | CSV files loaded into SQLite |
 
-# 💡 Example Queries
+#💡 Example Queries
 
 # 📊 SQL Queries
 
