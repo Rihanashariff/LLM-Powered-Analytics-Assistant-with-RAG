@@ -100,12 +100,14 @@ streamlit
 
 
 # 📊 Dataset
-Field	Detail
-Name-	Brazilian E-Commerce Public Dataset by Olist
-Source-	Kaggle (uploaded to Google Drive per guidelines)
-Size	- ~100,000 orders · 8 relational tables · ~40,000 review records
-Period-	2016 – 2018
-Format-	CSV files loaded into SQLite
+
+| Field   | Detail |
+|--------|--------|
+| Name   | Brazilian E-Commerce Public Dataset by Olist |
+| Source | Kaggle (uploaded to Google Drive per guidelines) |
+| Size   | ~100,000 orders · 8 relational tables · ~40,000 review records |
+| Period | 2016 – 2018 |
+| Format | CSV files loaded into SQLite |
 
 # 💡 Example Queries
 
