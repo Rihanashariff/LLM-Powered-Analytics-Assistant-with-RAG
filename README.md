@@ -52,29 +52,29 @@ It is built using the **Olist Brazilian E-Commerce dataset**.
 rag-analytics-assistant/
 │
 ├── data/
-│   ├── olist.db                     # SQLite database (Olist e-commerce data)
-│   ├── chunks.pkl                  # Chunked review text for RAG
-│   ├── faiss_index.bin             # FAISS vector index for embeddings
-│   ├── olist_loader.py              # Loads CSV files into SQLite DB (ETL pipeline)
+│   ├── olist.db                  # SQLite database (Olist e-commerce data)
+│   ├── chunks.pkl               # Chunked review text for RAG
+│   ├── faiss_index.bin          # FAISS vector index for embeddings
+│   └── olist_loader.py          # ETL pipeline (CSV → SQLite)
+│
 ├── rag/
-│   ├── embedder.py                # Generate embeddings (Sentence Transformers)
-│   ├── retriever.py               # FAISS similarity search & retrieval logic
+│   ├── embedder.py             # Generate embeddings (Sentence Transformers)
+│   └── retriever.py            # FAISS similarity search
 │
 ├── sql/
-│   ├── nl_to_sql.py               # Natural Language → SQL query generator
+│   └── nl_to_sql.py            # Natural Language → SQL generator
 │
 ├── llm/
-│   ├── router.py                  # Classifies query → SQL / RAG / HYBRID
-│   ├── sentiment.py              # Sentiment analysis on customer reviews
-│   ├── synthesizer.py            # Combines SQL + RAG outputs into final answer
-│   ├── chart_generator.py       # Auto-selects chart type & visualization logic
+│   ├── router.py               # Classifies query → SQL / RAG / HYBRID
+│   ├── sentiment.py            # Sentiment analysis
+│   ├── synthesizer.py          # Combines SQL + RAG results
+│   └── chart_generator.py     # Auto chart selection + Plotly visualization
 │
-├── app.py                        # Streamlit UI (main application entry point)
+├── app.py                      # Streamlit UI (main entry point)
 │
-├── .env                          # API keys (OpenAI / LLM keys)
-├── requirements.txt             # Python dependencies
-├── README.md                    # Project documentation
-
+├── .env                        # API keys (Groq / LLM keys)
+├── requirements.txt            # Python dependencies
+└── README.md                   # Project documentation
 
 ## 📦 requirements.txt
 
