@@ -48,7 +48,7 @@ It is built using the **Olist Brazilian E-Commerce dataset**.
 - Real-time query interaction
 
 
-## 📂 Project Structure
+# 📂 Project Structure
 rag-analytics-assistant/
 │
 ├── data/
