@@ -12,11 +12,12 @@ client = OpenAI(
     base_url="https://api.groq.com/openai/v1"
 )
 
-def synthesize(sql_result, rag_result):
+def synthesize(question,sql_result, rag_result):
     prompt = f"""
-You are an e-commerce analytics expert.
+Answer the question using the data below.
 
-Combine structured (SQL) and unstructured (customer reviews) insights.
+Question:
+{question}
 
 SQL Result:
 {sql_result}
@@ -24,7 +25,14 @@ SQL Result:
 Review Insights:
 {rag_result}
 
-Give a clear, concise business insight.
+Rules:
+- Give ONLY 3-4 short points
+- Focus on direct reasons (not strategy)
+- NO recommendations
+- NO business expansion ideas
+- Keep answer very short
+
+Final Answer:
 """
 
     response = client.chat.completions.create(
