@@ -21,7 +21,7 @@ You are a customer insights analyst.
 Analyze the following customer reviews and provide:
 
 1. Overall sentiment (Positive / Negative / Mixed)
-2. Top 3 complaint themes
+2. Common complaints
 3. Key improvement suggestions
 
 Reviews:
