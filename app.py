@@ -6,6 +6,7 @@ from llm.sentiment import analyze_reviews
 from llm.synthesizer import synthesize
 from llm.chart_generator import generate_chart
 
+st.image("img.png", width=200)
 st.title("LLM Analytics Assistant with RAG")
 
 query = st.text_input("Ask your question")
