@@ -7,7 +7,7 @@ from llm.synthesizer import synthesize
 from llm.chart_generator import generate_chart
 
 st.image("img.png", width=200)
-st.title("LLM Analytics Assistant with RAG")
+st.title("LLM Analytics Assistant")
 
 query = st.text_input("Ask your question")
 
@@ -41,5 +41,5 @@ if st.button("Submit"):
         chunks = retrieve(query)
         rag_result = analyze_reviews(chunks)
 
-        final = synthesize(sql_summary, rag_result)
+        final = synthesize(query, sql_summary, rag_result)
         st.write(final)
