@@ -17,11 +17,15 @@ if st.button("Submit"):
 
     if route == "SQL":
         sql = generate_sql(query)
-        df = execute_sql(sql)
+        st.subheader("Generated SQL Query")
+        st.code(sql, language="sql")
 
+        df = execute_sql(sql)
+        st.subheader("Query Result")
         st.write(df)
 
         summary = summarize(df)
+        st.subheader("Business Insight")
         st.write(summary)
 
         chart = generate_chart(df)
@@ -35,6 +39,9 @@ if st.button("Submit"):
 
     else:
         sql = generate_sql(query)
+        st.subheader("Generated SQL Query")
+        st.code(sql, language="sql")
+        
         df = execute_sql(sql)
         sql_summary = summarize(df)
 
