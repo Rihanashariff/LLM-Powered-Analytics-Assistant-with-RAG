@@ -16,16 +16,24 @@ def analyze_reviews(chunks):
     context = "\n".join(chunks)
 
     prompt = f"""
-You are a customer insights analyst.
+From the reviews below, extract ONLY the main issues.
 
-Analyze the following customer reviews and provide:
+Rules:
+- Return ONLY 4 to 5 points
+- Each point must be short
+- Format: issue → fix
+- Max 20 words per line
+- No explanations
+- No extra text
+- Output in English
 
-1. Overall sentiment (Positive / Negative / Mixed)
-2. Common complaints
-3. Key improvement suggestions
+Example:
+- Late delivery → fix: Improve logistics speed
 
 Reviews:
 {context}
+
+Answer:
 """
 
     response = client.chat.completions.create(
