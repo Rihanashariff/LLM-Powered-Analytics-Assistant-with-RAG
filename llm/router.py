@@ -15,16 +15,16 @@ def route_query(question: str) -> str:
     system_prompt = """
 Classify the user question into one of the following categories:
 
-1. SQL → If question asks about numbers, metrics, counts, revenue, orders
-2. RAG → If question asks for general business insights or explanation
-3. SENTIMENT → If question asks about customer reviews, complaints, satisfaction, feedback
+1. SQL → If question asks about numbers, metrics, counts, revenue, orders,totals
+2. RAG → If question asks about for opinions, summaries, reviews, customer feedback,customer reviews, complaints, satisfaction, feedback
+3. HYBRID → If question requires both SQL data and RAG insights
 
 Examples:
 - "Total sales?" → SQL
-- "Why are customers unhappy?" → SENTIMENT
-- "Give business insights" → RAG
+- "Why are customers unhappy?, Give business insights" → RAG
+- "Analyze sales and reviews together" → HYBRID
 
-Return ONLY one word: SQL / RAG / SENTIMENT
+Return ONLY one word: SQL / RAG / HYBRID
 """
 
     response = client.chat.completions.create(
@@ -78,7 +78,8 @@ if __name__ == "__main__":
         "Which sellers have the most revenue and what complaints do customers have?",
         "Analyze sales and reviews together",
         "Which products have the highest sales and lowest ratings?",
-        "Compare ratings and revenue by category"
+        "Compare ratings and revenue by category",
+        "What do customers think about product quality?" #Rag
 ]
     
 
